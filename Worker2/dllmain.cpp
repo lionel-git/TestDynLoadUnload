@@ -1,12 +1,15 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
 #include <Windows.h>
 
+#include <iostream>
+
 BOOL APIENTRY DllMain(HMODULE hModule,
     DWORD  ul_reason_for_call,
     LPVOID lpReserved
 )
 {
-    // worker2
+    std::cout << "Worker2: " << hModule << " " << ul_reason_for_call << " " << lpReserved << std::endl;
+
     switch (ul_reason_for_call)
     {
     case DLL_PROCESS_ATTACH:
