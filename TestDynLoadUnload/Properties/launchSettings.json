@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TestDynLoadUnload": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

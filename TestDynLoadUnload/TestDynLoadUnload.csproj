@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy ..\x64\Debug\Worker1.dll $(TargetDir)Worker1.dll&#xD;&#xA;copy ..\x64\Debug\Worker2.dll $(TargetDir)Worker2.dll&#xD;&#xA;copy ..\x64\Debug\corecpp.dll $(TargetDir)corecpp.dll&#xD;&#xA;&#xD;&#xA;" />
+  </Target>
+
+</Project>
